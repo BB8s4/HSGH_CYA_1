@@ -158,7 +158,7 @@ const button = document.getElementById("myButton");
           document.getElementById("resultHeader").innerHTML = "<div> 청명은 화음에 있는 개방 분타로 들어가 구칠을 찾았다.</div> <div> &nbsp;</div> <div> &ldquo;초삼아, 난 왜 불렀어?&rdquo;</div> <div> &ldquo;저기, 그게 사실은&hellip;&rdquo;</div> <div> &ldquo;뭐, 네가 결혼을? 축하해.&rdquo;</div> <div> &ldquo;아니, 축하할 일이 아니고, 난 결혼 따위 하기 싫다고. 그러니까 네가 좀 도와줘라.&rdquo;</div> <div> &ldquo;뭐, 내가? 하지만&hellip;&rdquo;</div> <div> &ldquo;그냥 예전부터 사귀던 사이었다고 대충 둘러대면 돼. 자 그럼 가자!&rdquo;</div> <div> &ldquo;자, 잠깐!&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;크흠, 그래서 너희 둘은 예전부터 정인이었던 사이였다고?&rdquo;현종은 구칠을 날카로운 눈으로 훑어보았다.</div> <div> &ldquo;예&hellip; 하하.&rdquo;</div> <div> &ldquo;어쩐지 저 놈에겐 너무 잘 해주더라.&rdquo; 누군가 소근거렸다.</div> <div> 현자배와 운자배, 그리고 화산 오검까지 모인 자리에서 모두의 시선은 구칠에게 가 있었다.</div> <div> &lsquo;으윽, 다들 날 뚫어져라 쳐다보네.&rsquo;</div> <div> &ldquo;구칠아, 긴장하지 마.&rdquo; 청명은 다정한 척, 구칠의 손을 잡았다.</div> <div> &ldquo;우리 그이가 많이 소심하네 하. 하. 너무 부담스럽나 보다. 그만 좀 취조하죠?&rdquo;</div>";
           document.getElementById("smallText").innerHTML = "(23) 성공! 어떻게 지금 당장은 속아넘긴 것 같다!";   
           break;
-        case "":
+        case "종팔":
           document.getElementById("resultHeader").innerHTML = "종팔을 선택했다!";
           document.getElementById("resultText").innerHTML = "<div> &ldquo;그럼 홍대광 아저씨, 종팔이 놈 좀 불러 주세요.&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;히익!&rdquo;</div> <div> &ldquo;저 놈은 자네를 보기만 해도 저렇게 기겁하는데, 저 놈과 제대로 된 연기가 가능하겠나?&rdquo;</div> <div> &ldquo;음, 그렇긴 해요.&rdquo;</div> ";
           document.getElementById("smallText").innerHTML = "(24) 실패! 친분이 있는 인물 위주로 고르자! ";   
