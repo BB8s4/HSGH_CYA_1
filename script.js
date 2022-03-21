@@ -149,7 +149,7 @@ const button = document.getElementById("myButton");
           break;
         case "번충":
           document.getElementById("resultHeader").innerHTML = "번충을 선택했다.";
-          document.getElementById("resultText").innerHTML = "<div> &ldquo;번충아, 나 좀 도와줘라.&rdquo;</div> <div> &ldquo;알겠습니다 형님!&rdquo;</div> <div> &nbsp;</div> <div> 번충은 화산의 도문으로 찾아가 모두가 보는 앞에서 무릎을 꿇었다.</div> <div> &nbsp;</div> <div> &ldquo;청명 형님의 호방함과 강한 힘! 그리고 남자다운 매력에 반했습니다!&lt;br&gt;</div> <div> 이제 형님이 아닌 낭군으로 모시겠습니다!&rdquo;</div> <div> -수군수군</div> <div> &ldquo;저&hellip; 저, 산적 놈이 감히 우리 청명이를 넘봐!&rdquo; 현영은 그 꼴을 보고 뒤로 넘어가려고 했다.&nbsp;</div> <div> &ldquo;저도 손 씻고 건실하게 살아간지 꽤 되었습니다. 제가 평생 책임질 테니 청명 도장을 제게 주시지요!&rdquo;</div> <div> &ldquo;윽, 저 조합은 뭐냐?&rdquo;</div> <div> &ldquo;이거 진짜냐? 그냥 단수인게 문제가 아니라 청명이 눈이 좀 많이 이상한거 아니냐?&rdquo;</div> <div> &ldquo;천지신명이시어..&rdquo;</div> <div> &ldquo;녹림왕이 화산에 독을 풀었다!&rdquo;</div>";
+          document.getElementById("resultText").innerHTML = "<div> &ldquo;번충아, 나 좀 도와줘라.&rdquo;</div> <div> &ldquo;알겠습니다 형님!&rdquo;</div> <div> &nbsp;</div> <div> 번충은 화산의 도문으로 찾아가 모두가 보는 앞에서 무릎을 꿇었다.</div> <div> &nbsp;</div> <div> &ldquo;청명 형님의 호방함과 강한 힘! 그리고 남자다운 매력에 반했습니다!</div> <div> 이제 형님이 아닌 낭군으로 모시겠습니다!&rdquo;</div> <div> -수군수군</div> <div> &ldquo;저&hellip; 저, 산적 놈이 감히 우리 청명이를 넘봐!&rdquo; 현영은 그 꼴을 보고 뒤로 넘어가려고 했다.&nbsp;</div> <div> &ldquo;저도 손 씻고 건실하게 살아간지 꽤 되었습니다. 제가 평생 책임질 테니 청명 도장을 제게 주시지요!&rdquo;</div> <div> &ldquo;윽, 저 조합은 뭐냐?&rdquo;</div> <div> &ldquo;이거 진짜냐? 그냥 단수인게 문제가 아니라 청명이 눈이 좀 많이 이상한거 아니냐?&rdquo;</div> <div> &ldquo;천지신명이시어..&rdquo;</div> <div> &ldquo;녹림왕이 화산에 독을 풀었다!&rdquo;</div>";
           document.getElementById("smallText").innerHTML = "(22) 성공? 강한 반대에 부딪히긴 했어도 아슬아슬하게 통과!";   
           break;
         case "구칠":
