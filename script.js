@@ -17,7 +17,6 @@ const nameInput = document.getElementById("name");
 const button = document.getElementById("myButton");
 
   function changeText(){
-    document.getElementById("resultCard").style = "display:block";
 
     switch(nameInput.value) {
         case "남궁도위":
@@ -159,7 +158,7 @@ const button = document.getElementById("myButton");
           document.getElementById("smallText").innerHTML = "(23) 성공! 어떻게 지금 당장은 속아넘긴 것 같다!";   
           break;
         case "종팔":
-          document.getElementById("resultHeader").innerHTML = "종팔을 선택했다!";
+          document.getElementById("resultHeader").innerHTML = "종팔을 선택했다.";
           document.getElementById("resultText").innerHTML = "<div> &ldquo;그럼 홍대광 아저씨, 종팔이 놈 좀 불러 주세요.&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;히익!&rdquo;</div> <div> &ldquo;저 놈은 자네를 보기만 해도 저렇게 기겁하는데, 저 놈과 제대로 된 연기가 가능하겠나?&rdquo;</div> <div> &ldquo;음, 그렇긴 해요.&rdquo;</div> ";
           document.getElementById("smallText").innerHTML = "(24) 실패! 친분이 있는 인물 위주로 고르자! ";   
           break;
@@ -173,7 +172,6 @@ const button = document.getElementById("myButton");
           document.getElementById("resultText").innerHTML = "<div> 청명은 최근 사업을 더더욱 확장하고 있는 유령문의 문주인 도운찬에게 부탁하기로 했다.&nbsp;</div> <div> &ldquo;저기, 도운찬 문주님? 사실 제가&hellip;&rdquo;&nbsp;</div> <div> &ldquo;예엑? 아무리 그래도 왜 저랑&hellip;바쁘게 일하고 있는 것 안 보이십니까?&rdquo;</div> <div> -스윽</div> <div> 청명은 금자와 유령문에게 유리하게 작성된 계약서의 수정 조항 내역을 도운찬에게 내밀었다.</div> <div> &ldquo;예, 예. 그럼요. 도와드려야죠 제가.&rdquo;</div> <div> 이젠 거의 돈 귀신이 되어버린 도운찬이었다.</div> <div> &nbsp;</div> <div> &mdash;</div> <div> &nbsp;</div> <div> &ldquo;저기, 문주님? 청명 도장의 어떤 점에 반하시게 된 건가요?&rdquo;</div> <div> &ldquo;하하, 저는 청명 도장의 그 능숙한 수완과 자본력에 반했달까요? 역시 남자는 능력 아니겠습니까?&rdquo;</div> <div> &ldquo;청명아. 문주님이랑 정말 사귀는 거 맞냐? 돈으로 매수한 건 사귀는 게 아니란다.&rdquo;</div> ";
           document.getElementById("smallText").innerHTML = "(26) 실패! 돈이 세상만사에 다 능사는 아닌 것 같다.";   
           break;
-
         case "천마":
         case "장일소":
         case "법정":
@@ -183,15 +181,14 @@ const button = document.getElementById("myButton");
             document.getElementById("resultText").innerHTML = "대가리 깨지고 싶지?";
             document.getElementById("smallText").innerHTML = "";   
             break;
-            case "" :
         case "청명":
         case "매화검존":
           document.getElementById("resultHeader").innerHTML = "청명을 선택했다!";
           document.getElementById("resultText").innerHTML = "<div> &ldquo;끄으으으&hellip; 도사가 무슨 결혼? 다 꺼져! 나는 나와 연애한다!&rdquo;</div> <div> &ldquo;청명아, 그게 무슨 개소리냐.&rdquo;</div> <div> &ldquo;그냥 혼인하기 싫으면 그렇다고 해요.&rdquo;</div> <div> &ldquo;저놈, 그렇게 안 보여도 의외로 도사다운 면도 조금 있단 말이지. 아무래도 평생 독신으로 사려나 보네.&rdquo;&nbsp;</div> <div> &ldquo;그럼 장문인과 장로님들에게 솔직히 말씀드려라. 괜히 여기서 혼자 고민해봤자 아무 답도 안 나오니.&rdquo;</div> <div> &ldquo;휴, 그래 돌아가서 결착을 봐야겠다.&rdquo;</div> ";
           document.getElementById("smallText").innerHTML = "(0) 성공! 그러나 연애는 혼자서 할 수 없다! <br> -True ending-";   
           break;
-          case "" :
-            return
+        case "" :
+          return
         default:
             document.getElementById("resultHeader").innerHTML = "그게 누구였더라...?";
             document.getElementById("resultText").innerHTML = "음... 이 사람에게 부탁 할 수는 없어.";
@@ -199,10 +196,7 @@ const button = document.getElementById("myButton");
      }
      
     document.getElementById("searchHeader").innerHTML = "부탁할 사람을 다시 고를까?";
+    document.getElementById("resultCard").style = "display:block";
+
 }
 myButton.addEventListener("click", changeText);
-
-
-
-
-
