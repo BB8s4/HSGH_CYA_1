@@ -14,11 +14,21 @@ document.addEventListener('input', e => {
 })
 
 const nameInput = document.getElementById("name");
-const button = document.getElementById("myButton");
+const myButton = document.getElementById("myButton");
+const againButton = document.getElementById("againButton");
+const againText = document.getElementById("againText");
+
+myButton.addEventListener("click", changeText);
+againButton.addEventListener("click", changeAgainText);
+
+
+
 
   function changeText(){
+    againButton.style = "display:none";
+    againText.style = "display:none";
 
-    switch(nameInput.value) {
+    switch(nameInput.value.trim()) {
         case "남궁도위":
           document.getElementById("resultHeader").innerHTML = "남궁도위를 선택했다!";
           document.getElementById("resultText").innerHTML = "<div>&ldquo;청명은 가장 가까이에 있던 남궁도위에게 일단 말을 꺼내보았다.</div><div>&ldquo;야, 니가 나좀 도와주면 안돼? 남색가인 척좀 같이 해줘라.&rdquo;</div><div>“에엑? 왜 저를 보십니까? 안그래도 성기능에 문제 있다는 소문이 있는데, 남색가라는 소문이 돈다면 전 정말 평생 결혼을 못 할 겁니다!”         <br> 남궁도위는 질색하며 거절했다.</div><div>&lsquo;그래, 쟤한테 예전 일로도 좀 미안하긴 했는데 여기에 또 이상한 소문을 안겨 주는건 좀 미안하지.&rsquo;</div>";
@@ -26,7 +36,7 @@ const button = document.getElementById("myButton");
           break; 
         case "홍대광":
           document.getElementById("resultHeader").innerHTML = "홍대광을 선택했다!";
-          document.getElementById("resultText").innerHTML = "<div> 청명은 마침 가까이에 있던 홍대광에게 일단 말을 꺼내보았다.</div> <div> &nbsp;</div> <div> &ldquo;저기, 홍대광 아저씨! 그러면 저랑 같이 단수인 척 해주시면 안 되나요?&rdquo;</div> <div> &nbsp;</div> <div> 홍대광은 자신을 가리켰다. &ldquo;응? 나랑?&rdquo;</div> <div> &ldquo;네.&rdquo;</div> <div> &ldquo;아니, 다 늙은 나랑 그런 소문이 나서 좋을 것도 없을 텐데. 대체 왜&hellip;&rdquo;</div> <div> &ldquo;어차피 일단 상황을 모면하기 위한 거니까요. 그래서, 안 해 주실 거에요?&rdquo;</div> <div> &ldquo;으&hellip; 나도 영 내키진 않긴 한데, 그래도 그동안 많이 신세진 것도 있으니&hellip;&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;오 좋아요! 그럼 바로 가죠!&rdquo;</div> <div> &nbsp;</div> <div> &mdash;</div> <div> 청명이 중대 발표가 있다고 불러 천우맹의 모두가 모여 있는 자리에 청명과 홍대광이 같이 들어 왔다.</div> <div> &ldquo;음, 무슨 일로 불렀나, 화산검협?&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;사실, 그동안 부끄러워서 말을 못 했는데, 홍대광 아저씨랑 저는 정인인 사이었어요!&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;뭐, 뭣이?&rdquo;</div> <div> &ldquo;말도 안돼&hellip;&rdquo;</div> <div> &ldquo;세상에&hellip;&rdquo;</div> <div> &ldquo;아니, 청명아, 네가 뭐가 그리 모자라다고 그런 거지 아저씨랑 사귀는 거냐?&rdquo;</div> <div> &nbsp;</div> <div> 홍대광을 위아래로 아무리 훑어보아도 그저 풍채 좋고 인상 좋은 거지, 그 이상도 이하도 아니었다.</div> <div> 홍대광은 그 말에 약간 발끈했다. &ldquo;거지라 미안하게 됐수다!&rdquo;</div> <div> &ldquo;뭐, 나는 사람의 외면보다는 내면을 중시하니까. 홍대광 아저씨의 사람 좋은 면에 반한거지.&rdquo;</div> <div> &ldquo;아무리 그래도 외면도 조금 봐라 청명아.&hellip;&rdquo;</div>"
+          document.getElementById("resultText").innerHTML = "<div> 청명은 마침 가까이에 있던 홍대광에게 일단 말을 꺼내보았다.</div> <div> &nbsp;</div> <div> &ldquo;저기, 홍대광 아저씨! 그러면 저랑 같이 단수인 척 해주시면 안 되나요?&rdquo;</div> <div> &nbsp;</div> <div> 홍대광은 자신을 가리켰다. &ldquo;응? 나랑?&rdquo;</div> <div> &ldquo;네.&rdquo;</div> <div> &ldquo;아니, 다 늙은 나랑 그런 소문이 나서 좋을 것도 없을 텐데. 대체 왜&hellip;&rdquo;</div> <div> &ldquo;어차피 일단 상황을 모면하기 위한 거니까요. 그래서, 안 해 주실 거에요?&rdquo;</div> <div> &ldquo;으&hellip; 나도 영 내키진 않긴 한데, 그래도 그동안 많이 신세진 것도 있으니&hellip;&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;오 좋아요! 그럼 바로 가죠!&rdquo;</div> <div> &nbsp;</div> <div> &mdash;</div> <div> 청명이 중대 발표가 있다고 불러 천우맹의 모두가 모여 있는 자리에 청명과 홍대광이 같이 들어 왔다.</div> <div> &ldquo;음, 무슨 일로 불렀나, 화산검협?&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;사실, 그동안 부끄러워서 말을 못 했는데, 홍대광 아저씨랑 저는 정인인 사이었어요!&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;뭐, 뭣이?&rdquo;</div> <div> &ldquo;말도 안돼&hellip;&rdquo;</div> <div> &ldquo;세상에&hellip;&rdquo;</div> <div> &ldquo;아니, 청명아, 네가 뭐가 그리 모자라다고 그런 거지 아저씨랑 사귀는 거냐?&rdquo;</div> <div> &nbsp;</div> <div> 홍대광을 위아래로 아무리 훑어보아도 그저 풍채 좋고 인상 좋은 거지, 그 이상도 이하도 아니었다.</div> <div> 홍대솽은 그 말에 약간 발끈했다. &ldquo;거지라 미안하게 됐수다!&rdquo;</div> <div> &ldquo;뭐, 나는 사람의 외면보다는 내면을 중시하니까. 홍대광 아저씨의 사람 좋은 면에 반한거지.&rdquo;</div> <div> &ldquo;아무리 그래도 외면도 조금 봐라 청명아.&hellip;&rdquo;</div>"
           document.getElementById("smallText").innerHTML = "(2)성공! 홍대광은 마음에 상처를 입긴 했어도 일단 다들 어느 정도 속은 듯 하다.";
           break;
         case "당패":
@@ -80,7 +90,9 @@ const button = document.getElementById("myButton");
         case "혜연":
           document.getElementById("resultHeader").innerHTML = "혜연을 선택했다!";
           document.getElementById("resultText").innerHTML = "<div> 청명은 헤연에게 가 사정을 설명해 보았다.</div> <div> &ldquo;나 좀 도와줘라. 응? 중생을 구제하는게 너같은 스님이 해야 할 일 아니냐?&rdquo;</div> <div> &ldquo;시주, 왜 이러십니까, 저는 불법을 닦는 몸입니다. 그런데 남색이라뇨. 아무리 연기라지만&hellip; 다른 분에게 부탁해 보시죠.&rdquo;</div> <div> &ldquo;에잉, 알았다.&rdquo;</div> ";
-          document.getElementById("smallText").innerHTML = "(12) 실패! 연애가 가능한 인물을 고르자!";          
+          document.getElementById("smallText").innerHTML = "(12) 실패! 연애가 가능한 인물을 고르자!"; 
+          document.getElementById("againButton").style = "display:block";
+          document.getElementById("againText").innerHTML = "<div> 청명은 헤연에게 가 사정을 설명해 보았다.</div> <div> &ldquo;나 좀 도와줘라. 응? 중생을 구제하는게 너같은 스님이 해야 할 일 아니냐?&rdquo;</div> <div> &ldquo;시주, 왜 이러십니까, 저는 불법을 닦는 몸입니다. 그런데 남색이라뇨. 아무리 연기라지만&hellip; 다른 분에게 부탁해 보시죠.&rdquo;</div> <div> &ldquo;에잉, 알았다.&rdquo;</div> ";
           break;
         case "백아":
           document.getElementById("resultHeader").innerHTML = "백아를 선택했다!";
@@ -89,7 +101,7 @@ const button = document.getElementById("myButton");
           break;
         case "당잔":
           document.getElementById("resultHeader").innerHTML = "당잔을 선택했다!";
-          document.getElementById("resultText").innerHTML = "<div> &ldquo;어이 거기.&rdquo;</div> <div> &ldquo;청명 도장님? 저한테는 왜&hellip;&rdquo;</div> <div> &ldquo;사실 그게&hellip;&rdquo;</div> <div> &ldquo;예? 아니, 저도 단수라는 소문이 나는 건 싫습니다. 제가 소가주는 아니지만 저도 장래에 혼인을 해야 하는데요.&rdquo;</div> <div> &ldquo;이게? 화산에서 나한테 단련은 다 받아 놓고 이대로 입 싹 씻겠다 이거냐? 협조 좀 해!&rdquo;&nbsp;</div> <div> &ldquo;에휴&hellip;그럼 어쩔 수 없죠. 이번만입니다.&rdquo;</div> <div> &nbsp;</div> <div> 청명은 천우맹 모두를 모아 놓고 발표를 했다.</div> <div> &ldquo;자 모두 주목! 사실 당잔이랑 나는 연인 관계다!&rdquo;</div> <div> &ldquo;하하, 어쩌다보니 그렇게 됐네요.&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;허?&rdquo;</div> <div> &ldquo;아니, 저 둘이 단수? 뭔가 엄청 의왼데?&rdquo;</div> <div> 당소소는 이후 당잔은 청명 몰래 불러 추궁했다.</div> <div> &ldquo;잔아, 너 제대로 불어, 대체 어떻게 해서 우리 사형을 꼬신거야?&rdquo;</div> <div> &ldquo;아&hellip; 아니 그게&hellip;&rdquo;</div> ";
+          document.getElementById("resultText").innerHTML = "<div> &ldquo;어이 거기.&rdquo;</div> <div> &ldquo;청명 도장님? 저한테는 왜&hellip;&rdquo;</div> <div> &ldquo;사실 그게&hellip;&rdquo;</div> <div> &ldquo;예? 아니, 저도 단수라는 소문이 나는 건 싫습니다. 제가 소가주는 아니지만 저도 장래에 혼인을 해야 하는데요.&rdquo;</div> <div> &ldquo;이게? 화산에서 나한테 단련은 다 받아 놓고 이대로 입 싹 씻겠다 이거냐? 협조 좀 해!&rdquo;&nbsp;</div> <div> &ldquo;에휴&hellip;그럼 어쩔 수 없죠. 이번만입니다.&rdquo;</div> <div> &nbsp;</div> <div> 청명은 천우맹 모두를 모아 놓고 발표를 했다.</div> <div> &ldquo;자 모두 주목! 사실 당패랑 나는 연인 관계다!&rdquo;</div> <div> &ldquo;하하, 어쩌다보니 그렇게 됐네요.&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;허?&rdquo;</div> <div> &ldquo;아니, 저 둘이 단수? 뭔가 엄청 의왼데?&rdquo;</div> <div> 당소소는 이후 당잔은 청명 몰래 불러 추궁했다.</div> <div> &ldquo;잔아, 너 제대로 불어, 대체 어떻게 해서 우리 사형을 꼬신거야?&rdquo;</div> <div> &ldquo;아&hellip; 아니 그게&hellip;&rdquo;</div> ";
           document.getElementById("smallText").innerHTML = "(14) 실패! 당잔은 협조를 하나 싶더니만, 누나의 끈질긴 추궁에, 소소에게 일러 바쳤다!";          
           break;
         case "청진":
@@ -97,7 +109,7 @@ const button = document.getElementById("myButton");
         case "명도":
         case "당보":
         case "암존":
-          document.getElementById("resultHeader").innerHTML = "";
+          document.getElementById("resultHeader").innerHTML = nameInput.value +"(을/를) 선택했다!";
           document.getElementById("resultText").innerHTML = "‘내가 무슨 생각을…’";
           document.getElementById("smallText").innerHTML = "(15) 실패! 죽은 사람과는 연인인 척 할 수 없다!";   
           break;  
@@ -113,8 +125,8 @@ const button = document.getElementById("myButton");
         case "허공":
         case "무진":
         case "진초백":
-          document.getElementById("resultHeader").innerHTML = "";
-          document.getElementById("resultText").innerHTML = "응? 그 녀석?";
+          document.getElementById("resultHeader").innerHTML = nameInput.value +"(을/를) 선택했다!";
+          document.getElementById("resultText").innerHTML = "응? 그 녀석에게??";
           document.getElementById("smallText").innerHTML = "(17) 천우맹 내에 있는 무인이나, 청명과 친분이 깊은 인물에게 부탁해보자!";   
           break;
         case "곽회":
@@ -127,7 +139,7 @@ const button = document.getElementById("myButton");
         case "현종":
         case "현영":
         case "현상":
-          document.getElementById("resultHeader").innerHTML = "";
+          document.getElementById("resultHeader").innerHTML = nameInput.value +"(을/를) 선택했다!";
           document.getElementById("resultText").innerHTML = "";
           document.getElementById("smallText").innerHTML = "(18) 그를 포함한 화산의 나머지를 속이려는 것이니 그에게 부탁 할수는 없다!";
           break;
@@ -143,19 +155,18 @@ const button = document.getElementById("myButton");
           break;
         case "남궁명":
         case "위립산":
-          document.getElementById("resultHeader").innerHTML = "";
+          document.getElementById("resultHeader").innerHTML = nameInput.value +"을 선택했다!";
           document.getElementById("resultText").innerHTML = "<div>&ldquo;아저씨, 좀 도와주실 수 있나요?&rdquo;</div><div>&ldquo;응? 미안하네, 나는 유부남이라서 못 도와주겠어. 근데 왜 굳이 나를...&rdquo;</div>";
           document.getElementById("smallText").innerHTML = "(21) 실패! 되도록이면 결혼을 하지 않은 인물을 고르자!";   
           break;
         case "번충":
           document.getElementById("resultHeader").innerHTML = "번충을 선택했다.";
-          document.getElementById("resultText").innerHTML = "<div> &ldquo;번충아, 나 좀 도와줘라.&rdquo;</div> <div> &ldquo;알겠습니다 형님!&rdquo;</div> <div> &nbsp;</div> <div> 번충은 화산의 도문으로 찾아가 모두가 보는 앞에서 무릎을 꿇었다.</div> <div> &nbsp;</div> <div> &ldquo;청명 형님의 호방함과 강한 힘! 그리고 남자다운 매력에 반했습니다!</div> <div> 이제 형님이 아닌 낭군으로 모시겠습니다!&rdquo;</div> <div> -수군수군</div> <div> &ldquo;저&hellip; 저, 산적 놈이 감히 우리 청명이를 넘봐!&rdquo; 현영은 그 꼴을 보고 뒤로 넘어가려고 했다.&nbsp;</div> <div> &ldquo;저도 손 씻고 건실하게 살아간지 꽤 되었습니다. 제가 평생 책임질 테니 청명 도장을 제게 주시지요!&rdquo;</div> <div> &ldquo;윽, 저 조합은 뭐냐?&rdquo;</div> <div> &ldquo;이거 진짜냐? 그냥 단수인게 문제가 아니라 청명이 눈이 좀 많이 이상한거 아니냐?&rdquo;</div> <div> &ldquo;천지신명이시어..&rdquo;</div> <div> &ldquo;녹림왕이 화산에 역병을 몰고왔다!&rdquo;</div>";
+          document.getElementById("resultText").innerHTML = "<div> &ldquo;번충아, 나 좀 도와줘라.&rdquo;</div> <div> &ldquo;알겠습니다 형님!&rdquo;</div> <div> &nbsp;</div> <div> 번충은 화산의 도문으로 찾아가 모두가 보는 앞에서 무릎을 꿇었다.</div> <div> &nbsp;</div> <div> &ldquo;청명 형님의 호방함과 강한 힘! 그리고 남자다운 매력에 반했습니다!&lt;br&gt;</div> <div> 이제 형님이 아닌 낭군으로 모시겠습니다!&rdquo;</div> <div> -수군수군</div> <div> &ldquo;저&hellip; 저, 산적 놈이 감히 우리 청명이를 넘봐!&rdquo; 현영은 그 꼴을 보고 뒤로 넘어가려고 했다.&nbsp;</div> <div> &ldquo;저도 손 씻고 건실하게 살아간지 꽤 되었습니다. 제가 평생 책임질 테니 청명 도장을 제게 주시지요!&rdquo;</div> <div> &ldquo;윽, 저 조합은 뭐냐?&rdquo;</div> <div> &ldquo;이거 진짜냐? 그냥 단수인게 문제가 아니라 청명이 눈이 좀 많이 이상한거 아니냐?&rdquo;</div> <div> &ldquo;천지신명이시어..&rdquo;</div> <div> &ldquo;녹림왕이 화산에 독을 풀었다!&rdquo;</div>";
           document.getElementById("smallText").innerHTML = "(22) 성공? 강한 반대에 부딪히긴 했어도 아슬아슬하게 통과!";   
           break;
         case "구칠":
-        
-          document.getElementById("resultHeader").innerHTML = "구칠을 선택했다!";
-          document.getElementById("resultText").innerHTML = "<div> 청명은 화음에 있는 개방 분타로 들어가 구칠을 찾았다.</div> <div> &nbsp;</div> <div> &ldquo;초삼아, 난 왜 불렀어?&rdquo;</div> <div> &ldquo;저기, 그게 사실은&hellip;&rdquo;</div> <div> &ldquo;뭐, 네가 결혼을? 축하해.&rdquo;</div> <div> &ldquo;아니, 축하할 일이 아니고, 난 결혼 따위 하기 싫다고. 그러니까 네가 좀 도와줘라.&rdquo;</div> <div> &ldquo;뭐, 내가? 하지만&hellip;&rdquo;</div> <div> &ldquo;그냥 예전부터 사귀던 사이었다고 대충 둘러대면 돼. 자 그럼 가자!&rdquo;</div> <div> &ldquo;자, 잠깐!&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;크흠, 그래서 너희 둘은 예전부터 정인이었던 사이였다고?&rdquo;현종은 구칠을 날카로운 눈으로 훑어보았다.</div> <div> &ldquo;예&hellip; 하하.&rdquo;</div> <div> &ldquo;어쩐지 저 놈에겐 너무 잘 해주더라.&rdquo; 누군가 소근거렸다.</div> <div> 현자배와 운자배, 그리고 화산 오검까지 모인 자리에서 모두의 시선은 구칠에게 가 있었다.</div> <div> &lsquo;으윽, 다들 날 뚫어져라 쳐다보네.&rsquo;</div> <div> &ldquo;구칠아, 긴장하지 마.&rdquo; 청명은 다정한 척, 구칠의 손을 잡았다.</div> <div> &ldquo;우리 그이가 많이 소심하네 하. 하. 너무 부담스럽나 보다. 그만 좀 취조하죠?&rdquo;</div>";
+          document.getElementById("resultText").innerHTML = "구칠을 선택했다!";
+          document.getElementById("resultHeader").innerHTML = "<div> 청명은 화음에 있는 개방 분타로 들어가 구칠을 찾았다.</div> <div> &nbsp;</div> <div> &ldquo;초삼아, 난 왜 불렀어?&rdquo;</div> <div> &ldquo;저기, 그게 사실은&hellip;&rdquo;</div> <div> &ldquo;뭐, 네가 결혼을? 축하해.&rdquo;</div> <div> &ldquo;아니, 축하할 일이 아니고, 난 결혼 따위 하기 싫다고. 그러니까 네가 좀 도와줘라.&rdquo;</div> <div> &ldquo;뭐, 내가? 하지만&hellip;&rdquo;</div> <div> &ldquo;그냥 예전부터 사귀던 사이었다고 대충 둘러대면 돼. 자 그럼 가자!&rdquo;</div> <div> &ldquo;자, 잠깐!&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;크흠, 그래서 너희 둘은 예전부터 정인이었던 사이였다고?&rdquo;현종은 구칠을 날카로운 눈으로 훑어보았다.</div> <div> &ldquo;예&hellip; 하하.&rdquo;</div> <div> &ldquo;어쩐지 저 놈에겐 너무 잘 해주더라.&rdquo; 누군가 소근거렸다.</div> <div> 현자배와 운자배, 그리고 화산 오검까지 모인 자리에서 모두의 시선은 구칠에게 가 있었다.</div> <div> &lsquo;으윽, 다들 날 뚫어져라 쳐다보네.&rsquo;</div> <div> &ldquo;구칠아, 긴장하지 마.&rdquo; 청명은 다정한 척, 구칠의 손을 잡았다.</div> <div> &ldquo;우리 그이가 많이 소심하네 하. 하. 너무 부담스럽나 보다. 그만 좀 취조하죠?&rdquo;</div>";
           document.getElementById("smallText").innerHTML = "(23) 성공! 어떻게 지금 당장은 속아넘긴 것 같다!";   
           break;
         case "종팔":
@@ -178,7 +189,7 @@ const button = document.getElementById("myButton");
         case "법정":
         case "호가명":
         case "천살":
-            document.getElementById("resultHeader").innerHTML = "";
+          document.getElementById("resultHeader").innerHTML = nameInput.value +"(을/를) 선택했다!";
             document.getElementById("resultText").innerHTML = "대가리 깨지고 싶지?";
             document.getElementById("smallText").innerHTML = "";   
             break;
@@ -191,6 +202,7 @@ const button = document.getElementById("myButton");
         case "" :
           return
         default:
+          document.getElementById("resultHeader").innerHTML = nameInput.value +"(을/를) 선택했다!";
             document.getElementById("resultHeader").innerHTML = "그게 누구였더라...?";
             document.getElementById("resultText").innerHTML = "음... 이 사람에게 부탁 할 수는 없어.";
             document.getElementById("smallText").innerHTML = "한번 공백이나 오타 없이 이름을 다시 제대로 입력해보자!";
@@ -200,4 +212,24 @@ const button = document.getElementById("myButton");
     document.getElementById("resultCard").style = "display:block";
 
 }
-myButton.addEventListener("click", changeText);
+
+
+function changeAgainText(){
+
+  switch(nameInput.value) {
+    case "혜연":
+      document.getElementById("resultHeader").innerHTML = "혜연을 선택했다!";
+      document.getElementById("againText").innerHTML = "IF: 혜연이 부탁을 들어줬다면";
+      document.getElementById("resultText").innerHTML = "<div> 청명은 헤연에게 가 사정을 설명해 보았다.</div> <div> &ldquo;나 좀 도와줘라. 응? 중생을 구제하는게 너같은 스님이 해야 할 일 아니냐?&rdquo;</div> <div> &ldquo;시주, 왜 이러십니까, 저는 불법을 닦는 몸입니다. 그런데 남색이라뇨. 아무리 연기라지만&hellip; 다른 분에게 부탁해 보시죠.&rdquo;</div> <div> &ldquo;제에&mdash;발! 생각해 봐. 다른 사람들은 어차피 나중에 결혼을 할 수도 있는 몸인데 나랑 그런 소문이 난다 치면 혼삿 길이 막힌단 말야. 근데 너는 그런 걱정도 없다고. 사람 두명 살린다 생각하고 나좀 도와 주라. 너밖에 부탁할 사람이 없어서 그래. 응?&rdquo;</div> <div> 청명은 혜연의 동정심을 유발하며 혜연의 승포 자락에 매달렸다.&nbsp;</div> <div> &ldquo;휴, 알았습니다. 대신 정말 잠시뿐이니까요.&rdquo;</div> <div> &ldquo;알았어. 나한테 맡겨!&rdquo;</div> <div> &nbsp;</div> <div> ***</div> <div> &ldquo;아무튼, 그렇게 됐다. 이제 우리는 사귀는 사이다. 내 꽃땡중 건들면 알지?&rdquo;</div> <div> &nbsp;</div> <div> -수근 수근</div> <div> 잠깐, 내가 뭘 잘못 들었나?</div> <div> 화산 오검들은 자신들의 귀를 의심했다.</div> <div> &nbsp;</div> <div> &ldquo;혜연 스님! 정말이십니까? 저 망나니랑요?&rdquo; 윤종은 그답지 않게 흥분하며 혜연의 어깨를 흔들었다.</div> <div> &ldquo;흐윽, 지켜드리지 못해 죄송합니다 스님&hellip;&rdquo; 조걸은 눈물지어 보였다.</div> <div> &ldquo;사형들, 지금 말 다했어?&rdquo; 청명은 눈을 부라려 보았다.</div> <div> &ldquo;청, 청명아&hellip; 너, 그거 진심이냐? 그, 소림의 법정이라던가 그 쪽을 엿먹이려고 일부러 이러는 건 아니고?&rdquo;</div> <div> &ldquo;아니 진심인데?&rdquo;</div> <div> &ldquo;하, 하지만 혜연 스님은&hellip; 색을 멀리하는 게 당연한 위치다.&rdquo;</div> <div> &nbsp;</div> <div> &ldquo;아! 몰라! 그냥 좋은걸 어떡해. 좋은 건 좋다고 하지. 세상 사람들이 우리를 아무리 손가락질 해도 너희들은 우릴 축복해 주면 안 되냐?&rdquo;</div> <div> &lsquo;아무리 그래도 도사와 스님의 조합이라니&hellip;&rsquo;</div> <div> &nbsp;</div> <div> &ldquo;시주들, 저희의 이 관계가 부적절하단건 잘 알고 있습니다. 하지만&hellip; 저는 청명시주가 좋습니다. 그렇지만 부처님의 말씀이 싫은 건 아닙니다. 제가 세속하여 청명 시주와 함께하는게 그렇게 잘못된 일인지요..&rdquo;</div> <div> 혜연의 맑은 눈망울에 오검은 어느새 설득되었다</div> <div> &ldquo;뭐, 사실 혜연 스님은 어릴 적 부터 동자승이었고 이제 승복을 벗고 말고는 스님의 자유잖아. 전 응원해요 스님!&rdquo; 당소소가 말했다</div> <div> &nbsp;</div> <div> &ldquo;예, 고맙습니다 시주.&rdquo;</div> <div> &ldquo;그래, 너희들도 그렇게 좀 나와라.&rdquo;</div> <div> &ldquo;그래, 알았다&rdquo;</div> <div> &ldquo;휴, 뭐, 우리가 왈가왈부할 문제가 아니지, 사실.&rdquo;</div> <div> &lsquo;크큭, 이게 통하네. 걱정했는데, 이 녀석 은근히 설득력이 있잖아? &rsquo; 청명은 생각했다.</div>  ";
+      document.getElementById("smallText").innerHTML = "(27) 성공! 의외로 거짓말에 능숙한 혜연이었다!"; 
+      break;
+    default:
+      document.getElementById("resultHeader").innerHTML = "그게 누구였더라...?";
+      document.getElementById("resultText").innerHTML = "음... 이 사람에게 부탁 할 수는 없어.";
+      document.getElementById("smallText").innerHTML = "한번 공백이나 오타 없이 이름을 다시 제대로 입력해보자!";
+  }
+  document.getElementById("searchHeader").innerHTML = "부탁할 사람을 다시 고를까?";
+  document.getElementById("resultCard").style = "display:block";
+
+}
+
